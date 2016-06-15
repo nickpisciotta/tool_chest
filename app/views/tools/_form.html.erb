@@ -1,0 +1,15 @@
+<%= form_for(@tool) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+
+  <%= f.label :quantity %>
+  <%= f.text_field :quantity %>
+
+  <%= f.label :category %>
+  <%= f.select(:category, options_for_select([["Power Tools", "Power Tools"], ["Kitchen Tools", "Kitchen Tools"], ["Cutting Tools", "Cutting Tools"]])) %>
+
+  <%= f.submit %>
+<% end %>
